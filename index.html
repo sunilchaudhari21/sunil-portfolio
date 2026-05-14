@@ -96,6 +96,8 @@ nav {
 }
 .chip-dot { width:5px; height:5px; border-radius:50%; background:var(--cyan); animation:blink 2s infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+@keyframes slowBlink { 0%,100%{opacity:1;box-shadow:0 0 6px rgba(16,185,129,.4)} 50%{opacity:.5;box-shadow:0 0 14px rgba(16,185,129,.8)} }
+@keyframes heartBeat { 0%,100%{transform:scale(1)} 25%{transform:scale(1.35)} 50%{transform:scale(1)} 75%{transform:scale(1.2)} }
 .section-head { font-family:var(--font-display); font-size:clamp(1.2rem,2.2vw,1.8rem); font-weight:800; line-height:1.1; margin-bottom:1rem; }
 .section-sub { font-size:1rem; color:var(--muted2); max-width:560px; line-height:1.8; margin-bottom:3.5rem; }
 .grad-text { background:linear-gradient(90deg,var(--cyan),var(--emerald)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
@@ -536,23 +538,17 @@ footer {
     <div class="reveal" style="transition-delay:.2s">
       <div class="chip"><span class="chip-dot"></span> Career Timeline</div>
       <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2001 – 2005</div>
-          <div class="tl-title">B.Sc Computer Science</div>
-          <div class="tl-body">Fergusson College, Pune — laid the technical foundation for a career in software quality.</div>
+        <div class="tl-item" style="padding-bottom:0">
+          <div class="tl-dot" style="border-color:var(--cyan);box-shadow:0 0 14px var(--cyan),0 0 30px rgba(6,182,212,.3)"></div>
+          <div class="tl-year" style="color:var(--emerald)">Dec 2021 – Present <span style="animation:heartBeat 1.5s ease-in-out infinite;display:inline-block;">❤️</span></div>
+          <div class="tl-title">Quality &amp; Release Manager — Bajaj Finserv Health</div>
+          <div class="tl-body">Leading release governance for 10+ microservices, biweekly cycles across 5+ squads. 99.9% deployment success, 30% incident reduction. Pune.</div>
         </div>
         <div class="tl-item">
           <div class="tl-dot green"></div>
-          <div class="tl-year">Feb 2010 – Jan 2016</div>
-          <div class="tl-title">Sr. Software QA Engineer — PubMatic</div>
-          <div class="tl-body">Designed end-to-end test plans for advertising data pipelines. Owned UAT environment, wrote complex SQL validations. Pune.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">Oct 2016 – Aug 2018</div>
-          <div class="tl-title">Sr. QA Engineer — AppDirect India</div>
-          <div class="tl-body">Owned QA for entire product modules. Managed weekly release regression cycles, CI/CD pipeline coordination.</div>
+          <div class="tl-year">May 2020 – Dec 2021</div>
+          <div class="tl-title">RunOps Manager / Scrum Master — Zimetrics</div>
+          <div class="tl-body">Managed full product delivery lifecycle, owned CI/CD pipelines, facilitated all Agile ceremonies, weekly status reporting to leadership.</div>
         </div>
         <div class="tl-item">
           <div class="tl-dot purple"></div>
@@ -561,16 +557,22 @@ footer {
           <div class="tl-body">Led entire Pune QA team, overseeing test strategy, resource planning, and multi-release QA execution.</div>
         </div>
         <div class="tl-item">
-          <div class="tl-dot green"></div>
-          <div class="tl-year">May 2020 – Dec 2021</div>
-          <div class="tl-title">RunOps Manager / Scrum Master — Zimetrics</div>
-          <div class="tl-body">Managed full product delivery lifecycle, owned CI/CD pipelines, facilitated all Agile ceremonies, weekly status reporting to leadership.</div>
+          <div class="tl-dot"></div>
+          <div class="tl-year">Oct 2016 – Aug 2018</div>
+          <div class="tl-title">Sr. QA Engineer — AppDirect India</div>
+          <div class="tl-body">Owned QA for entire product modules. Managed weekly release regression cycles, CI/CD pipeline coordination.</div>
         </div>
-        <div class="tl-item" style="padding-bottom:0">
-          <div class="tl-dot" style="border-color:var(--cyan);box-shadow:0 0 14px var(--cyan),0 0 30px rgba(6,182,212,.3)"></div>
-          <div class="tl-year" style="color:var(--emerald)">Dec 2021 – Present ★ Current</div>
-          <div class="tl-title">Quality &amp; Release Manager — Bajaj Finserv Health</div>
-          <div class="tl-body">Leading release governance for 10+ microservices, biweekly cycles across 5+ squads. 99.9% deployment success, 30% incident reduction. Pune.</div>
+        <div class="tl-item">
+          <div class="tl-dot green"></div>
+          <div class="tl-year">Feb 2010 – Jan 2016</div>
+          <div class="tl-title">Sr. Software QA Engineer — PubMatic</div>
+          <div class="tl-body">Designed end-to-end test plans for advertising data pipelines. Owned UAT environment, wrote complex SQL validations. Pune.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="border-color:var(--muted);box-shadow:none;"></div>
+          <div class="tl-year">2001 – 2005</div>
+          <div class="tl-title">B.Sc Computer Science</div>
+          <div class="tl-body">Fergusson College, Pune — laid the technical foundation for a career in software quality.</div>
         </div>
       </div>
     </div>
