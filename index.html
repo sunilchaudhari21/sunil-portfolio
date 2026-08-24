@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080C14;--bg2:#0D1220;--bg3:#111827;--cyan:#06B6D4;--emerald:#10B981;--purple:#8B5CF6;--silver:#F1F5F9;--muted:#64748B;--muted2:#94A3B8;--border:rgba(255,255,255,0.06);--border-cyan:rgba(6,182,212,0.2);--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;}
+:root{--bg:#080C14;--bg2:#0D1220;--bg3:#111827;--cyan:#06B6D4;--emerald:#10B981;--purple:#10B981;--silver:#F1F5F9;--muted:#64748B;--muted2:#94A3B8;--border:rgba(255,255,255,0.06);--border-cyan:rgba(6,182,212,0.2);--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
 body{background:var(--bg);color:var(--silver);font-family:var(--font-body);font-weight:300;overflow-x:hidden;cursor:none;}
@@ -56,7 +56,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.25rem 6vw;display:
 .sec-title{font-family:var(--font-display);font-size:clamp(1.2rem,2.2vw,1.8rem);font-weight:700;color:var(--silver);margin-bottom:.5rem;}
 .sec-sub{font-size:1rem;color:var(--muted2);max-width:560px;line-height:1.8;margin-bottom:2.5rem;}
 .grad-text{background:linear-gradient(90deg,var(--cyan),var(--emerald));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.grad-purple{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.grad-purple{background:linear-gradient(90deg,#8B5CF6,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s;}
 .reveal.in{opacity:1;transform:none;}
 .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;}
@@ -109,15 +109,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.25rem 6vw;display:
 .proj-card{background:var(--bg2);padding:1.75rem;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:background .3s;}
 .proj-card:hover{background:var(--bg3);}
 .proj-card.featured{grid-column:span 2;}
-.proj-card.ai-project{border-left:2px solid rgba(139,92,246,.4);}
-.proj-card.ai-project:hover{border-left-color:var(--purple);}
+.proj-card.ai-project{border-left:2px solid rgba(16,185,129,.4);}
+.proj-card.ai-project:hover{border-left-color:var(--emerald);}
 .proj-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,var(--cyan),var(--emerald));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
 .proj-card:hover::after{transform:scaleX(1);}
 .proj-num{font-family:var(--font-mono);font-size:2.5rem;font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(6,182,212,.08);position:absolute;top:.6rem;right:.9rem;line-height:1;transition:-webkit-text-stroke-color .3s;}
 .proj-card:hover .proj-num{-webkit-text-stroke-color:rgba(6,182,212,.22);}
 .proj-type{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.55rem;}
-.proj-card.ai-project .proj-type{color:var(--purple);}
-.ai-badge{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .6rem;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);color:var(--purple);border-radius:99px;margin-bottom:.6rem;}
+.proj-card.ai-project .proj-type{color:var(--emerald);}
+.ai-badge{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .6rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:var(--emerald);border-radius:99px;margin-bottom:.6rem;}
 .proj-title{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--silver);margin-bottom:.55rem;}
 .proj-desc{font-size:1rem;color:var(--muted2);line-height:1.7;margin-bottom:.9rem;flex:1;}
 .proj-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.9rem;}
@@ -158,8 +158,8 @@ footer{border-top:1px solid var(--border);padding:1.75rem 6vw;display:flex;justi
 .footer-copy{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);letter-spacing:.1em;}
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border-cyan),transparent);margin:0 6vw;position:relative;z-index:10;}
 .ai-section-label{display:flex;align-items:center;gap:.75rem;margin:2rem 0 1rem;padding-top:2rem;border-top:1px solid var(--border);}
-.ai-section-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(139,92,246,.3),transparent);}
-.ai-section-text{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);white-space:nowrap;}
+.ai-section-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(16,185,129,.3),transparent);}
+.ai-section-text{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--emerald);white-space:nowrap;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @keyframes slowBlink{0%,100%{opacity:1;box-shadow:0 0 5px rgba(16,185,129,.3)}50%{opacity:.5;box-shadow:0 0 11px rgba(16,185,129,.65)}}
 @keyframes heartBeat{0%,100%{transform:scale(1)}25%{transform:scale(1.35)}50%{transform:scale(1)}75%{transform:scale(1.2)}}
@@ -504,7 +504,7 @@ footer{border-top:1px solid var(--border);padding:1.75rem 6vw;display:flex;justi
   <div class="cert-grid reveal" style="transition-delay:.1s">
     <div class="cert-card"><div class="cert-icon" style="background:rgba(6,182,212,.1);">🏅</div><div><div class="cert-name">Certified Scrum Master (CSM®)</div><div class="cert-body">Scrum Alliance · Active</div></div></div>
     <div class="cert-card"><div class="cert-icon" style="background:rgba(16,185,129,.1);">🏅</div><div><div class="cert-name">Certified Scrum Product Owner (CSPO)</div><div class="cert-body">Scrum Alliance · Active</div></div></div>
-    <div class="cert-card"><div class="cert-icon" style="background:rgba(139,92,246,.1);">🎓</div><div><div class="cert-name">B.Sc. Computer Science</div><div class="cert-body">Fergusson College, Pune · 2001 – 2005</div></div></div>
+    <div class="cert-card"><div class="cert-icon" style="background:rgba(16,185,129,.1);">🎓</div><div><div class="cert-name">B.Sc. Computer Science</div><div class="cert-body">Fergusson College, Pune · 2001 – 2005</div></div></div>
     <div class="cert-card"><div class="cert-icon" style="background:rgba(6,182,212,.08);">⚡</div><div><div class="cert-name">Azure DevOps Practitioner</div><div class="cert-body">CI/CD &amp; Pipeline Governance · Microsoft Azure</div></div></div>
   </div>
 </section>
