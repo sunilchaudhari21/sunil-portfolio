@@ -471,33 +471,18 @@ footer{border-top:1px solid var(--border);padding:1.75rem 6vw;display:flex;justi
       <div class="ai-badge">🤖 Built with Claude AI</div>
       <div class="proj-type">AI · Release Planning · Full-Stack · Real-Time</div>
       <div class="proj-title">Dynamic Sprint Release Calendar</div>
-      <div class="proj-desc">A fully dynamic, self-computing sprint release calendar for a 5-month engineering cycle (Sept 2026 → Jan 2027) covering 10 squads. Auto-calculates all sprint phases — Dev Window, Code Freeze, QA Sign-Off, QA Regression, and Production Release — using custom business rules: last Tuesday of month as release day, Code Freeze always 4 working days before release, 1st &amp; 3rd Saturdays as working days, and public holiday detection with automatic date shifting. Zero manual date entry — change sprint definitions and every date recomputes instantly.<br><br>Features a <strong style="color:var(--cyan)">Live Heartbeat Banner</strong> showing the active sprint's phase, days to freeze, days to release, sprint progress %, and QA window in real time. A <strong style="color:var(--cyan)">Squad Status Tracker</strong> makes Code Freeze and Release tiles clickable — a popup tracks which of 10 squads (Labs, Utilization, ISP, HealthPay, Hospital, Pharmacy, Wellness, B2C, ABP, Health Vault) have completed freeze/release, with login-gated writes so every status change is recorded with the person's name and timestamp. Server-persisted state survives page reloads and is shared across all browsers in real time.</div>
+      <div class="proj-desc">Self-computing sprint calendar for a 5-month engineering cycle (Sept 2026 → Jan 2027) across 10 squads. Auto-calculates all sprint phases — Dev Window, Code Freeze, QA Sign-Off, QA Regression, and Production Release — with holiday-aware date shifting, last-Tuesday release rule, and 1st &amp; 3rd Saturday working-day logic. Zero manual date entry. Features a Live Heartbeat Banner showing active phase, days to freeze, and sprint progress %; plus a Squad Status Tracker with login-gated writes and server-persisted state shared in real time across all browsers. Built on Node.js + Vanilla JS, embedded in the PSE Automation Suite dashboard.</div>
       <div class="proj-tags">
-        <span class="tag">Claude AI</span><span class="tag">Node.js</span><span class="tag">Vanilla JS</span><span class="tag">Next.js</span><span class="tag">Azure DevOps</span><span class="tag">REST API</span><span class="tag">JSON Persistence</span><span class="tag">BFHL</span>
+        <span class="tag">Claude AI</span><span class="tag">Node.js</span><span class="tag">Vanilla JS</span><span class="tag">Next.js</span><span class="tag">Azure DevOps</span><span class="tag">REST API</span><span class="tag">BFHL</span>
       </div>
       <div class="proj-metrics">
         <div><div class="metric-val">10</div><div class="metric-label">Squads tracked</div></div>
-        <div><div class="metric-val">5 mo</div><div class="metric-label">Engineering cycle</div></div>
-        <div><div class="metric-val">8</div><div class="metric-label">Sprint phase types auto-computed</div></div>
+        <div><div class="metric-val">8</div><div class="metric-label">Phase types auto-computed</div></div>
         <div><div class="metric-val">0</div><div class="metric-label">Manual date entries</div></div>
       </div>
     </div>
     <div class="proj-card ai-project">
       <div class="proj-num">11</div>
-      <div class="ai-badge">🤖 Built with Claude AI</div>
-      <div class="proj-type">AI · Architecture · Stack</div>
-      <div class="proj-title">Release Calendar — Tech Stack</div>
-      <div class="proj-desc">Built and iterated end-to-end (design → backend → auth → persistence) within a single sprint. Frontend: Vanilla HTML/CSS/JS served via Next.js. Backend: Node.js custom HTTP server (port 3031) with GET/POST /api/squad-status. Persistence: JSON file on disk. Embedded as an iframe in the PSE Automation Suite dashboard. Hosted on internal intranet replacing ad-hoc spreadsheets and chat-based tracking across the entire engineering org.</div>
-      <div class="proj-tags">
-        <span class="tag">Node.js API</span><span class="tag">Admin Auth</span><span class="tag">iframe Embed</span><span class="tag">PSE Suite</span><span class="tag">Intranet</span>
-      </div>
-      <div class="proj-metrics">
-        <div><div class="metric-val">1</div><div class="metric-label">Sprint to build</div></div>
-        <div><div class="metric-val">Live</div><div class="metric-label">Real-time across all browsers</div></div>
-      </div>
-    </div>
-    <div class="proj-card ai-project">
-      <div class="proj-num">12</div>
       <div class="ai-badge">🤖 Built with Claude AI</div>
       <div class="proj-type">AI · Migration · Azure DevOps</div>
       <div class="proj-title">Work Item Migrator</div>
